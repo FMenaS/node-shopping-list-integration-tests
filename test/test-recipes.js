@@ -76,7 +76,7 @@ describe('Recipes', function() {
       //GET interface.
       .get('/recipes')
       .then(function(res) {
-        updateData.id = res.body[0]id;
+        updateData.id = res.body[0].id;
 
         return chai.request(app)
           .put(`/recipes/${updateData.id}`)
